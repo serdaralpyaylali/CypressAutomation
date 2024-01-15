@@ -16,16 +16,23 @@ class MainDashboardPage
         phrManagement: ()=> cy.xpath('//*[text()="PHR Management"]'),
         vvipPatients: ()=> cy.xpath('//*[text()="VVIP Patients"]'),
     }
-    subMenu ={
-        
+    healthcareStakeholderMenu ={
+        entities: ()=> cy.xpath('//*[text()="- Entities"]'),
+        healthcareServices: ()=> cy.xpath('//*[text()="- Healthcare Services"]'),
+        healthcareProfessionals: ()=> cy.xpath('//*[text()="- Healthcare Professionals"]'),
+        medicalStudents: ()=> cy.xpath('//*[text()="- Medical Student"]'),   
     }
     clickDashboard()
     {
-        this.upperMenu.dashBoard().click();
+        this.upperMenu.dashBoard().click()
     }
     clickHealthcareStakeholders()
     {
         this.upperMenu.healthcareStakeholder().click();
+    }
+    clickHealthcareProfessionals()
+    {
+        this.healthcareStakeholderMenu.healthcareProfessionals().click();
     }
 }
 module.exports = new MainDashboardPage();
