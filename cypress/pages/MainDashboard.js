@@ -15,7 +15,6 @@ class MainDashboardPage
         audit: ()=> cy.xpath('//*[text()="Audit"]'),
         phrManagement: ()=> cy.xpath('//*[text()="PHR Management"]'),
         vvipPatients: ()=> cy.xpath('//*[text()="VVIP Patients"]'),
-        
     }
     subMenu ={
         
